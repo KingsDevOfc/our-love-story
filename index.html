@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -22,43 +22,6 @@
       font-family: 'Great Vibes', cursive;
       font-size: 3em;
       margin-top: 20px;
-    }
-    .photo-row, .carousel {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 20px 0;
-    }
-    .photo-row img, .carousel img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .photo-row img:hover, .carousel img:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-    .carousel-container {
-      width: 100%;
-      overflow: hidden;
-      margin-top: 40px;
-    }
-    .carousel {
-      flex-wrap: nowrap;
-      animation: slide 30s infinite linear;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .carousel img {
-      width: 120px;
-      height: 120px;
-      margin: 0 10px;
     }
     .reasons {
       background: rgba(0, 0, 0, 0.4);
@@ -148,33 +111,21 @@
       border-radius: 15px;
       font-style: italic;
     }
-    @media (max-width: 600px) {
-      .photo-row img, .carousel img {
-        width: 80px;
-        height: 80px;
-      }
-    }
   </style>
 </head>
 <body onclick="criaCora(event)">
   <audio id="musica" loop>
-><source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
   </audio>
 
   <div id="controls">
-    <button class="music-button" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
     <button id="botao-musica" class="music-button" onclick="toggleMusica()">▶️ Tocar Música</button>
     <button class="music-button" onclick="document.body.classList.toggle('dark')">🌓 Alternar Tema</button>
   </div>
 
-  <div id="musica-info">📻 Tocando: Arctic Monkeys - 505 (Tradução)</div>
+  <div id="musica-info">📻 Tocando: Sua música especial</div>
 
   <h1>Our Love Story</h1>
-
-  <div class="photo-row">
-    <img src="edu1.jpg"><img src="edu2.jpg"><img src="edu3.jpg"><img src="edu4.jpg">
-    <img src="emily1.jpg"><img src="emily2.jpg"><img src="emily3.jpg"><img src="emily4.jpg">
-  </div>
 
   <div class="reasons">
     <h2>20 Motivos pelos quais eu te amo</h2>
@@ -188,19 +139,13 @@
 
   <a href="carta.html" class="carta-link">💌 Leia minha carta para você</a>
 
-  <div class="carousel-container">
-    <div class="carousel">
-      <img src="edu1.jpg"><img src="edu2.jpg"><img src="edu3.jpg"><img src="edu4.jpg">
-      <img src="emily1.jpg"><img src="emily2.jpg"><img src="emily3.jpg"><img src="emily4.jpg">
-    </div>
-  </div>
-
   <div class="contador" id="contador"></div>
 
   <div class="depoimentos">
     “Você foi a melhor coincidência que já me aconteceu.”<br>
     “Cada detalhe seu me faz ter certeza que encontrei meu amor.”<br>
-    “Amar você é como respirar: não dá pra viver sem.”
+    “Amar você é como respirar: não dá pra viver sem.”<br>
+    “Desde 12 de julho de 2025, minha vida mudou ao te conhecer.”
   </div>
 
   <div class="hearts"></div>
@@ -240,10 +185,10 @@
     }
     addEstrelas();
 
-    const inicio = new Date('2023-02-14');
+    const inicio = new Date('2025-07-12');
     const hoje = new Date();
     const dias = Math.floor((hoje - inicio) / (1000 * 60 * 60 * 24));
     document.getElementById('contador').textContent = `📆 Estamos juntos há ${dias} dias de puro amor ❤️`;
   </script>
 </body>
-</html
+</html>
