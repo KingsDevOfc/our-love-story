@@ -17,6 +17,7 @@
       color: white;
       font-family: 'Indie Flower', cursive;
       text-align: center;
+      overflow-x: hidden;
     }
 
     body.dark {
@@ -69,6 +70,32 @@
       cursor: pointer;
       font-weight: bold;
     }
+
+    /* ⭐ ESTRELAS */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: yellow;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      opacity: 0.8;
+      animation: subirEstrela linear infinite;
+    }
+
+    @keyframes subirEstrela {
+      from { transform: translateY(100vh); }
+      to { transform: translateY(-10vh); }
+    }
   </style>
 </head>
 
@@ -89,15 +116,17 @@
     <h2>20 Motivos pelos quais eu amo a Maria</h2>
     <ol>
       <li>Seu sorriso</li><li>Seus olhos</li><li>Seu abraço</li><li>Seu jeito</li><li>Seu carinho</li>
-      <li>Sua atenção</li><li>Sua companhia</li><li>Sua voz</li><li>Seu beijo</li><li>Seu jeito único</li>
+      <li>Sua atenção</li><li>Sua companhia</li><li>Sua voz</li><li>Seu beijo</li><li>Seu amor</li>
       <li>Como me faz rir</li><li>Como me cuida</li><li>Seu toque</li><li>Sua presença</li><li>Seu cabelo</li>
-      <li>Seu jeito de falar</li><li>Seu amor</li><li>Sua essência</li><li>Seu olhar</li><li>Porque é você ❤️</li>
+      <li>Seu jeito de falar</li><li>Sua essência</li><li>Seu olhar</li><li>Seu jeito único</li><li>Porque é você ❤️</li>
     </ol>
   </div>
 
   <a href="carta.html" class="carta-link">💌 Leia minha carta para Maria</a>
 
   <div class="contador" id="contador"></div>
+
+  <div class="stars"></div>
 
   <script>
     const audio = document.getElementById("musica");
@@ -110,7 +139,7 @@
       }
     }
 
-    // DATA CORRETA: 4 de junho de 2025
+    // CONTADOR (4 de junho de 2025)
     const inicio = new Date(2025, 5, 4);
     inicio.setHours(0,0,0,0);
 
@@ -129,6 +158,24 @@
 
     atualizarContador();
     setInterval(atualizarContador, 1000);
+
+    // ⭐ ESTRELAS
+    function criarEstrelas() {
+      const container = document.querySelector(".stars");
+
+      for (let i = 0; i < 40; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        star.style.left = Math.random() * 100 + "%";
+        star.style.animationDuration = (3 + Math.random() * 5) + "s";
+        star.style.opacity = Math.random();
+
+        container.appendChild(star);
+      }
+    }
+
+    criarEstrelas();
   </script>
 
 </body>
