@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Love Story</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Amor</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&display=swap" rel="stylesheet">
 
   <style>
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      padding: 0;
       background: linear-gradient(to bottom, #8b0000, #ff3c3c);
       color: white;
       font-family: 'Indie Flower', cursive;
+      padding: 20px;
       text-align: center;
-      overflow-x: hidden;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3em;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
-    .reasons, .depoimentos {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      margin: 30px auto;
-      width: 90%;
-      max-width: 700px;
+    .carta {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
       border-radius: 20px;
+      font-size: 1.3em;
+      line-height: 1.6em;
     }
 
-    .reasons ol {
-      text-align: left;
-      font-size: 1.2em;
-    }
-
-    a.carta-link, .contador {
-      display: block;
-      margin: 40px auto;
+    a {
+      display: inline-block;
+      margin-top: 30px;
       color: white;
-      font-size: 1.2em;
       font-weight: bold;
       text-decoration: underline;
     }
@@ -53,49 +45,28 @@
 
 <body>
 
-  <h1>Our Love Story</h1>
+  <h1>Carta para Maria</h1>
 
-  <div class="reasons">
-    <h2>20 Motivos pelos quais eu amo a Maria</h2>
-    <ol>
-      <li>Seu sorriso</li><li>Seus olhos</li><li>Seu abraço</li><li>Seu jeito</li><li>Seu carinho</li>
-      <li>Sua atenção</li><li>Sua companhia</li><li>Sua voz</li><li>Seu beijo</li><li>Seu jeito único</li>
-      <li>Como me faz rir</li><li>Como me cuida</li><li>Seu toque</li><li>Sua presença</li><li>Seu cabelo</li>
-      <li>Seu jeito de falar</li><li>Seu amor</li><li>Sua essência</li><li>Seu olhar</li><li>Porque é você ❤️</li>
-    </ol>
+  <div class="carta">
+
+    Querida Maria,<br><br>
+
+    Desde o dia em que te conheci no show da Praça João Abraão, quando perguntei seu nome e te dei um beijo no rosto, algo em mim mudou completamente.<br><br>
+
+    Desde 4 de junho de 2025, cada conversa, cada momento e cada lembrança só fez esse sentimento crescer ainda mais.<br><br>
+
+    Hoje, no Dia dos Namorados, eu queria muito estar com você. Te abraçar, segurar sua mão e viver esse dia de verdade ao seu lado.<br><br>
+
+    Você virou a parte mais bonita dos meus dias. Mesmo longe, você continua sendo a pessoa com quem eu mais queria estar.<br><br>
+
+    Eu te amo, Maria. E isso é só o começo da nossa história.<br><br>
+
+    Para sempre seu,<br>
+    <strong>Eduardo Monteiro da Silva</strong>
+
   </div>
 
-  <a href="carta.html" class="carta-link">💌 Leia minha carta para Maria</a>
-
-  <div class="contador" id="contador"></div>
-
-  <div class="depoimentos">
-    “Você foi a melhor coincidência que já me aconteceu.”<br><br>
-    “Desde o show da Praça João Abraão, eu sabia que você era especial.”<br><br>
-    “Hoje, no Dia dos Namorados, eu queria estar com você.”<br><br>
-    “Desde 4 de junho de 2025, minha vida mudou completamente por sua causa, Maria.”
-  </div>
-
-  <script>
-    const inicio = new Date(2025, 5, 4);
-    inicio.setHours(0,0,0,0);
-
-    function atualizarContador() {
-      const agora = new Date();
-      const diff = agora - inicio;
-
-      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutos = Math.floor((diff / (1000 * 60)) % 60);
-      const segundos = Math.floor((diff / 1000) % 60);
-
-      document.getElementById('contador').textContent =
-        `💖 Estamos juntos há ${dias} dias, ${horas}h ${minutos}min ${segundos}s`;
-    }
-
-    atualizarContador();
-    setInterval(atualizarContador, 1000);
-  </script>
+  <a href="index.html">← Voltar</a>
 
 </body>
 </html>
